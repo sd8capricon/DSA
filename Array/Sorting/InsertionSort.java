@@ -7,15 +7,13 @@ public class InsertionSort {
         // Average Case Time Complexity: O(n^2)
         // Best Case Time Complexity: O(n)
 
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = i; j > 0; j--) {
+        for (int i = 1; i < arr.length; i++) 
+            for (int j = i; j > 0; j--) 
                 if (arr[j - 1] > arr[j]) {
                     int temp = arr[j - 1];
                     arr[j - 1] = arr[j];
                     arr[j] = temp;
                 }
-            }
-        }
 
         return arr;
     }
