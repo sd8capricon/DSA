@@ -23,9 +23,25 @@ class LinkedList:
 
         current.next = Node(value)
 
+    def reverse(self):
+        prev = None
+
+        while self.head:
+            next_node = self.head.next
+            self.head.next = prev
+            prev = self.head
+            self.head = next_node
+
+        self.head = prev
+
 
 list = LinkedList(1)
 list.append(2)
 list.append(3)
 
+print("LinkedList")
+list.traverse()
+
+print("Reversed LinkedList")
+list.reverse()
 list.traverse()
